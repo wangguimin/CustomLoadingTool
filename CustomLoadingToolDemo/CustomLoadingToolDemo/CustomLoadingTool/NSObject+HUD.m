@@ -53,14 +53,13 @@ static const void *HttpRequestHUDKey = &HttpRequestHUDKey;
     hud.margin = 10.f;
     UIImage *image = [[UIImage imageNamed:imageStr] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     hud.customView = [[UIImageView alloc] initWithImage:image];
-    hud.minSize = CGSizeMake(kScreenWidth / 3, kScreenWidth / 3);
+    hud.minSize = CGSizeMake([UIScreen mainScreen].bounds.size.width / 3, [UIScreen mainScreen].bounds.size.width / 3);
     hud.minShowTime = [self displayDurationForString:hint];
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     //    hud.bezelView.color = [UIColor colorWithWhite:0 alpha:0.5];
-    hud.bezelView.layer.cornerRadius = kScreenWidth / 24;
+    hud.bezelView.layer.cornerRadius = [UIScreen mainScreen].bounds.size.width / 24;
     //    hud.label.textColor = [UIColor whiteColor];
     
-    [hud setOffset:CGPointMake(hud.offset.x, hud.offset.y - kHeight(50))];
     [hud hideAnimated:YES];
     [self setHUD:hud];
     
@@ -89,14 +88,13 @@ static const void *HttpRequestHUDKey = &HttpRequestHUDKey;
     hud.margin = 10.f;
     UIImage *image = [[UIImage imageNamed:imageStr] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     hud.customView = [[UIImageView alloc] initWithImage:image];
-    hud.minSize = CGSizeMake(kScreenWidth / 3, kScreenWidth / 3);
+    hud.minSize = CGSizeMake([UIScreen mainScreen].bounds.size.width / 3, [UIScreen mainScreen].bounds.size.width / 3);
     hud.minShowTime = [self displayDurationForString:hint];
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
 //    hud.bezelView.color = [UIColor colorWithWhite:0 alpha:0.5];
-    hud.bezelView.layer.cornerRadius = kScreenWidth / 24;
+    hud.bezelView.layer.cornerRadius = [UIScreen mainScreen].bounds.size.width / 24;
 //    hud.label.textColor = [UIColor whiteColor];
     
-    [hud setOffset:CGPointMake(hud.offset.x, hud.offset.y - kHeight(50))];
     [hud hideAnimated:YES];
     [self setHUD:hud];
 
